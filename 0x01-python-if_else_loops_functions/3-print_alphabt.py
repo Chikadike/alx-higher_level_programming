@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for i in range(97,123):
-	if (i == 113) and (i == 101):
-		continue
-print(chr(i),end=" ")
+for qe in range(97, 123):
+    if (qe == 101 or qe == 113)
+         continue
+    print("{}".format(chr(qe)), end="")
