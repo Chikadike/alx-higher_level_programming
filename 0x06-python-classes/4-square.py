@@ -2,6 +2,7 @@
 # 4-square.py
 
 """Define a class Square."""
+i
 
 class Square:
 

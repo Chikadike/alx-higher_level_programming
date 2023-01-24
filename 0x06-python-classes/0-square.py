@@ -3,6 +3,7 @@
 # Dike Chika @ALX school Africa
 """Define a class Square."""
 
+
 class Square:
     """Represent a square."""
     pass
