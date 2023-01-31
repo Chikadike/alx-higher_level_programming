@@ -4,8 +4,9 @@
 
 
 def matrix_mul(m_a, m_b):
-    """Multiply two matrices.
-    
+    """Multiply two matrices
+
+
     Args:
         m_a (list of lists of ints/floats): The first matrix.
         m_b (list of lists of ints/floats): The second matrix.
