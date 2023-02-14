@@ -82,6 +82,7 @@ class TestBase_instantiation(unittest.TestCase):
 
     def test_range_id(self):
         self.assertEqual(range(5), Base(range(5)).id)
+
     def test_bytes_id(self):
         self.assertEqual(b'Python', Base(b'Python').id)
 
@@ -199,7 +200,6 @@ class TestBase_save_to_file(unittest.TestCase):
         with open("Base.json", "r") as f:
             self.assertTrue(len(f.read()) == 39)
 
-
     def test_save_to_file_overwrite(self):
         s = Square(9, 2, 39, 2)
         Square.save_to_file([s])
@@ -217,13 +217,14 @@ class TestBase_save_to_file(unittest.TestCase):
         Square.save_to_file([])
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
+
     def test_save_to_file_no_args(self):
         with self.assertRaises(TypeError):
             Rectangle.save_to_file()
 
     def test_save_to_file_more_than_one_arg(self):
-        with self.assertRaises(TypeError): 
-           Square.save_to_file([], 1)
+        with self.assertRaises(TypeError):
+            Square.save_to_file([], 1)
 
 
 class TestBase_from_json_string(unittest.TestCase):
@@ -301,7 +302,6 @@ class TestBase_create(unittest.TestCase):
         r2 = Rectangle.create(**r1_dictionary)
         self.assertIsNot(r1, r2)
 
-
     def test_create_rectangle_equals(self):
         r1 = Rectangle(3, 5, 1, 2, 7)
         r1_dictionary = r1.to_dictionary()
@@ -354,7 +354,6 @@ class TestBase_load_from_file(unittest.TestCase):
         Rectangle.save_to_file([r1, r2])
         list_rectangles_output = Rectangle.load_from_file()
         self.assertEqual(str(r1), str(list_rectangles_output[0]))
-
 
     def test_load_from_file_second_rectangle(self):
         r1 = Rectangle(10, 7, 2, 8, )
@@ -543,6 +542,7 @@ class TestBase_load_from_file_csv(unittest.TestCase):
     def test_load_from_file_csv_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file_csv([], 1)
+
 
 if __name__ == "__main__":
     unittest.main()

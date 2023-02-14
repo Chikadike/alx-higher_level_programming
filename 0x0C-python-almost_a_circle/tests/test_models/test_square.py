@@ -364,7 +364,7 @@ class TestSquare_stdout(unittest.TestCase):
         correct = "[Square] ({}) 0/0 - 4\n".format(s.id)
         self.assertEqual(correct, capture.getvalue())
 
-    def test_str_method_size_x(self)
+    def test_str_method_size_x(self):
         s = Square(5, 5)
         correct = "[Square] ({}) 5/0 - 5".format(s.id)
         self.assertEqual(correct, s.__str__())
@@ -496,7 +496,6 @@ class TestSquare_update_args(unittest.TestCase):
         s = Square(10, 10, 10, 10)
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             s.update(89, -4)
-
 
     def test_update_args_invalid_x(self):
         s = Square(10, 10, 10, 10)
