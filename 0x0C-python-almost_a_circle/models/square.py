@@ -44,8 +44,8 @@ class Square(Rectangle):
                         self.__init__(self.size, self.x, self.y)
                     else:
                         self.id = arg
-                elif a == 1:         
-           self.size = arg
+                elif a == 1:
+                    self.size = arg
                 elif a == 2:
                     self.x = arg
                 elif a == 3:
@@ -79,4 +79,3 @@ class Square(Rectangle):
         """Return the print() and str() representation of a Square."""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
-

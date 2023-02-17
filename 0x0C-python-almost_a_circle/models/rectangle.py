@@ -6,7 +6,7 @@ from models.base import Base
 class Rectangle(Base):
     """Represent a rectangle."""
 
-    def __init__(self, width, height,x=0, y=0, id=None):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize a new Rectangle.
 
         Args:
@@ -139,6 +139,7 @@ class Rectangle(Base):
                     self.x = v
                 elif k == "y":
                     self.y = v
+
     def to_dictionary(self):
         """Return the dictionary representation of a Rectangle."""
         return {
